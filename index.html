@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="gl1" src="images/linktag1.png">
+            <img id="gl2" src="images/linktag2.png">
+            <img id="gl3" src="images/linktag3.png">
+        </a-assets>
+
+            
+        <a-image src="#gl1" position="-1 1.6 -2" width="0.5" height="0.5"><a-animation attribute="rotation" dur="20000" from="0 0 0" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-image>
+        
+        <a-image src="#gl2" position="0 1.6 -2" width="0.5" height="0.5">><a-animation attribute="rotation" dur="20000" from="0 0 0" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-image>
+        
+        <a-image src="#gl3" position="1 1.6 -2" width="0.5" height="0.5">><a-animation attribute="rotation" dur="20000" from="0 0 0" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-image>
+            
+        <a-sky color="#ECECEC" src="images/guiter.png"></a-sky>
+            
+            <a-entity camera="userHeight: 1.6;fov:55;" look-controls>
+              <a-entity cursor="fuse: false; fuseTimeout: 500"
+                        position="0 0 -0.3"
+                        geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.009"
+                        material="color: #fdfd58; shader: flat">
+              </a-entity>
+            </a-entity>
+    </a-scene>
+</body>
+
+</html>
