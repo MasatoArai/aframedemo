@@ -14,6 +14,7 @@
             <img id="gl1" src="images/linktag1.png">
             <img id="gl2" src="images/linktag2.png">
             <img id="gl3" src="images/linktag3.png">
+            <img id="sky" src="images/guiter.jpg">
         </a-assets>
 
             
@@ -23,7 +24,7 @@
         
         <a-image src="#gl3" position="1 1.6 -2" width="0.5" height="0.5">><a-animation attribute="rotation" dur="20000" from="0 0 0" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-image>
             
-        <a-sky color="#ECECEC" src="images/guiter.png"></a-sky>
+        <a-sky color="#ECECEC" src="#sky"></a-sky>
             
             <a-entity camera="userHeight: 1.6;fov:55;" look-controls>
               <a-entity cursor="fuse: false; fuseTimeout: 500"
