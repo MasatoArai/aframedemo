@@ -6,6 +6,7 @@
     <title>Hello, World! - A-Frame</title>
     <meta name="description" content="Hello, World! - A-Frame">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
 </head>
 
 <body>
@@ -15,22 +16,130 @@
             <img id="gl2" src="images/linktag2.png">
             <img id="gl3" src="images/linktag3.png">
             <img id="sky" src="images/guiter.jpg">
+            <img id="brush" src="images/brushback.png">
+            <img id="l1g" src="images/l1g.png">
+            <img id="l2g" src="images/l2g.png">
+            <img id="l3g" src="images/l3g.png">
+            <img id="l1t" src="images/l1t.png">
+            <img id="l2t" src="images/l2t.png">
+            <img id="l3t" src="images/l3t.png">
+            
+            <script id="git1" type="text/html">
+                <a-entity class="link">
+                    <a-image src="#brush" position="0 1.5 -1.8" height="1.5" width="1.0393">
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="opacity" from="0"
+                           to="1" dur="2000" delay="1500"></a-animation>
+                    </a-image>
+                    <a-image src="#l1g" position="0 1.6 -1.2" height="1" width="0.693">
+                        <a-animation fill="both" repeat="0"
+                           direction="" attribute="position" from="0 1.6 -5.2"
+                           to="0 1.6 -1.2" dur="2000"></a-animation>
+                    </a-image>
+                    <a-image src="#l1t" position="0 1.55 -1" height="0.7" width="0.485">
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="rotation" from="0 -90 0"
+                           to="0 0 0" dur="1500" delay="3000" easing="ease-out"></a-animation>
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="opacity" from="0"
+                           to="1" dur="500" delay="2500" easing="ease-out"></a-animation>
+                    </a-image>
+
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="position" from="0 0 0"
+                           to="-0.1 0 0" dur="2000" delay="2500" easing="ease"></a-animation>
+                </a-entity>
+            </script>
+            <script id="git2" type="text/html">
+                <a-entity class="link">
+                    <a-image src="#brush" position="0 1.5 -1.8" height="1.5" width="1.0393">
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="opacity" from="0"
+                           to="1" dur="2000" delay="1500"></a-animation>
+                    </a-image>
+                    <a-image src="#l2g" position="0 1.6 -1.2" height="1" width="0.693">
+                        <a-animation fill="both" repeat="0"
+                           direction="" attribute="position" from="0 1.6 -5.2"
+                           to="0 1.6 -1.2" dur="2000"></a-animation>
+                    </a-image>
+                    <a-image src="#l2t" position="0 1.55 -1" height="0.7" width="0.485">
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="rotation" from="0 -90 0"
+                           to="0 0 0" dur="1500" delay="3000" easing="ease-out"></a-animation>
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="opacity" from="0"
+                           to="1" dur="500" delay="2500" easing="ease-out"></a-animation>
+                    </a-image>
+
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="position" from="0 0 0"
+                           to="-0.1 0 0" dur="2000" delay="2500" easing="ease"></a-animation>
+                </a-entity>
+            </script>
+            <script id="git3" type="text/html">
+                <a-entity class="link">
+                    <a-image src="#brush" position="0 1.5 -1.8" height="1.5" width="1.0393">
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="opacity" from="0"
+                           to="1" dur="2000" delay="1500"></a-animation>
+                    </a-image>
+                    <a-image src="#l3g" position="0 1.6 -1.2" height="1" width="0.693">
+                        <a-animation fill="both" repeat="0"
+                           direction="" attribute="position" from="0 1.6 -5.2"
+                           to="0 1.6 -1.2" dur="2000"></a-animation>
+                    </a-image>
+                    <a-image src="#l3t" position="0 1.55 -1" height="0.7" width="0.485">
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="rotation" from="0 -90 0"
+                           to="0 0 0" dur="1500" delay="3000" easing="ease-out"></a-animation>
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="opacity" from="0"
+                           to="1" dur="500" delay="2500" easing="ease-out"></a-animation>
+                    </a-image>
+
+                    <a-animation fill="both" repeat="0"
+                           direction="" attribute="position" from="0 0 0"
+                           to="-0.1 0 0" dur="2000" delay="2500" easing="ease"></a-animation>
+                </a-entity>
+            </script>
         </a-assets>
 
+        <a-entity rotation="0 180 0">
+        <a-image src="#gl1" position="-1 1.6 -1.75" width="0.5" height="0.5" class="clickable" rotation="0 24 0"> 
+            <a-animation begin="mouseenter" end="mouseleave" fill="backwards" repeat="indefinite"
+                   direction="alternateReverse" attribute="rotation" from="0 24 0"
+                   to="0 24 360" dur="2000"></a-animation>
+            </a-image>
+        <a-image src="#gl2" position="0 1.6 -2" width="0.5" height="0.5" class="clickable"> 
+            <a-animation begin="mouseenter" end="mouseleave" fill="backwards" repeat="indefinite"
+                   direction="alternateReverse" attribute="rotation" from="0 0 0"
+                   to="0 0 360" dur="2000"></a-animation>
+            </a-image>
+        <a-image src="#gl3" position="1 1.6 -1.75" width="0.5" height="0.5" class="clickable" rotation="0 -24 0"> 
+            <a-animation begin="mouseenter" end="mouseleave" fill="backwards" repeat="indefinite"
+                   direction="alternateReverse" attribute="rotation" from="0 -24 0"
+                   to="0 -24 360" dur="1000"></a-animation>
+            </a-image>
+        </a-entity>   
             
-        <a-image src="#gl1" position="-1 1.6 -2" width="0.5" height="0.5"><a-animation attribute="rotation" dur="20000" from="0 0 0" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-image>
+        <a-entity template="src: #git3"></a-entity>
         
-        <a-image src="#gl2" position="0 1.6 -2" width="0.5" height="0.5">><a-animation attribute="rotation" dur="20000" from="0 0 0" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-image>
-        
-        <a-image src="#gl3" position="1 1.6 -2" width="0.5" height="0.5">><a-animation attribute="rotation" dur="20000" from="0 0 0" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-image>
-            
         <a-sky color="#ECECEC" src="#sky"></a-sky>
             
             <a-entity camera="userHeight: 1.6;fov:55;" look-controls>
-              <a-entity cursor="fuse: false; fuseTimeout: 500"
-                        position="0 0 -0.3"
-                        geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.009"
-                        material="color: #fdfd58; shader: flat">
+              <a-entity cursor="fuse: true; maxDistance: 30;"
+                        position="0 0 -1.6"
+                        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                        material="color: #fdfd58; shader: flat"
+                        raycaster="objects: .clickable">
+                  
+        <a-animation begin="click" easing="ease-in" attribute="scale"
+             fill="" from="0.3 0.3 0.3" to="1 1 1" dur="100"></a-animation>
+        <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+             fill="forwards" from="0.3 0.3 0.3" to="1 1 1" dur="10"></a-animation>
+        <a-animation begin="fusing" end="mouseleave" easing="ease-in" attribute="scale"
+             fill="forwards" from="1 1 1" to="0.3 0.3 0.3" dur="1500"></a-animation>
+                  
               </a-entity>
             </a-entity>
     </a-scene>
