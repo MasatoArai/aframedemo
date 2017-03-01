@@ -103,24 +103,30 @@
                 </a-entity>
             </script>
         </a-assets>
-
-        <a-entity rotation="0 180 0">
-        <a-image src="#gl1" position="-1 1.6 -1.75" width="0.5" height="0.5" class="clickable" rotation="0 24 0"> 
-            <a-animation begin="mouseenter" end="mouseleave" fill="backwards" repeat="indefinite"
-                   direction="alternateReverse" attribute="rotation" from="0 24 0"
-                   to="0 24 360" dur="2000"></a-animation>
-            </a-image>
-        <a-image src="#gl2" position="0 1.6 -2" width="0.5" height="0.5" class="clickable"> 
-            <a-animation begin="mouseenter" end="mouseleave" fill="backwards" repeat="indefinite"
-                   direction="alternateReverse" attribute="rotation" from="0 0 0"
-                   to="0 0 360" dur="2000"></a-animation>
-            </a-image>
-        <a-image src="#gl3" position="1 1.6 -1.75" width="0.5" height="0.5" class="clickable" rotation="0 -24 0"> 
-            <a-animation begin="mouseenter" end="mouseleave" fill="backwards" repeat="indefinite"
-                   direction="alternateReverse" attribute="rotation" from="0 -24 0"
-                   to="0 -24 360" dur="1000"></a-animation>
-            </a-image>
-        </a-entity>   
+        
+        <a-entity rotation="0 90 0">
+            <a-entity rotation="0 -30 0">
+                <a-image src="#gl1" position="0 1.6 -2" width="0.5" height="0.5" class="clickable" rotation="0 0 0"> 
+                <a-animation begin="mouseenter" end="mouseleave" fill="backwards" repeat="indefinite"
+                       direction="alternateReverse" attribute="rotation" from="0 0 0"
+                       to="0 0 360" dur="2000"></a-animation>
+                </a-image>
+            </a-entity>
+            <a-entity rotation="0 0 0">
+                <a-image src="#gl2" position="0 1.6 -2" width="0.5" height="0.5" class="clickable" rotation="0 0 0"> 
+                <a-animation begin="mouseenter" end="mouseleave" fill="backwards" repeat="indefinite"
+                       direction="alternateReverse" attribute="rotation" from="0 0 0"
+                       to="0 0 360" dur="2000"></a-animation>
+                </a-image>
+            </a-entity>
+            <a-entity rotation="0 30 0">
+                <a-image src="#gl3" position="0 1.6 -2" width="0.5" height="0.5" class="clickable" rotation="0 0 0"> 
+                <a-animation begin="mouseenter" end="mouseleave" fill="backwards" repeat="indefinite"
+                       direction="alternateReverse" attribute="rotation" from="0 0 0"
+                       to="0 0 360" dur="2000"></a-animation>
+                </a-image>
+            </a-entity>
+        </a-entity>
             
         <a-entity template="src: #git2"></a-entity>
         
