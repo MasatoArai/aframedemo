@@ -64,8 +64,8 @@ MainCtrl.prototype.soundEfec = function () {
 
     function getPos(rot) {
         var Yrad = dr(rot.y);
-        var z = -2 * Math.sin(Yrad);
-        var x = -2 * Math.cos(Yrad);
+        var z = -9 * Math.sin(Yrad);
+        var x = -9 * Math.cos(Yrad);
         return {
             x: x
             , y: 0
