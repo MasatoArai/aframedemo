@@ -38,6 +38,10 @@ function MainCtrl(){
     AFRAME.registerComponent('sound-rem',{
         init:function(){
             self.soundEfec();
+            $('#cover').one('click',function(){
+                self.sound.play();
+                $(this).hide();
+            });
         }
     });
     
@@ -48,7 +52,7 @@ MainCtrl.prototype.soundEfec = function () {
     if(this.sound)return;
     this.sound = new Howl({
   src: ['sound/rock.mp3'],
-      autoplay: true,
+      autoplay: false,
       loop: true,
       volume: 1
     });
@@ -67,7 +71,7 @@ MainCtrl.prototype.soundEfec = function () {
 
     function getPos(rot,targetDeg) {
         var Yrad = dr(rot.y+targetDeg);
-        var x = -9 * Math.sin(Yrad);
+        var x = 9 * Math.sin(Yrad);
         var z = -9 * Math.cos(Yrad);
         return {
             x: x
