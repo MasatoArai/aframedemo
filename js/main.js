@@ -58,14 +58,17 @@ MainCtrl.prototype.soundEfec = function () {
     function lookloop() {
         window.requestAnimationFrame(lookloop);
         var camRotation = self.$cam.attr("rotation");
-        var param = getPos(camRotation);
+        var targetDeg = -90
+        var param = getPos(camRotation,targetDeg);
         self.sound.pos(param.x, param.y, param.z);
+        self.sound.volume(((-param.z+9)/18*7+3)/10);
+        
     }
 
-    function getPos(rot) {
-        var Yrad = dr(rot.y);
-        var z = -9 * Math.sin(Yrad);
-        var x = -9 * Math.cos(Yrad);
+    function getPos(rot,targetDeg) {
+        var Yrad = dr(rot.y+targetDeg);
+        var x = -9 * Math.sin(Yrad);
+        var z = -9 * Math.cos(Yrad);
         return {
             x: x
             , y: 0
