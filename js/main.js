@@ -26,7 +26,7 @@ function MainCtrl(){
                 var idnum = parseInt(this.dataset.gl.substr(1,1));
                 switch(key){
                     case 'l':
-                        self.selectGit(idnum);
+                        self.selectGit(idnum,this);
                         break;
                     case 'g':
                         self.closeGit(idnum);
@@ -85,9 +85,11 @@ MainCtrl.prototype.soundEfec = function () {
     }
 }
 
-MainCtrl.prototype.selectGit = function(gidnum){
+MainCtrl.prototype.selectGit = function(gidnum,el){
+    if(el.dataset.able=="false")return;
     var targetLink = $('#le'+gidnum);
     targetLink.attr('visible',false);
+    el.dataset.able="false";
     if(this.selectedKey!=0){
         this.closeGit(this.selectedKey);
     }
@@ -99,6 +101,7 @@ MainCtrl.prototype.selectGit = function(gidnum){
 MainCtrl.prototype.closeGit = function(gidnum){
     var targetLink = $('#le'+gidnum);
     targetLink.attr('visible',true);
+    targetLink.find('a-image')[0].dataset.able="true";
     this.$gitars.html('');
     this.selectedKey=0;
 }
